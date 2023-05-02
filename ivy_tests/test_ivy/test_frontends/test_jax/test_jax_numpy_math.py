@@ -2470,8 +2470,9 @@ def test_jax_numpy_reciprocal(
 # conj
 @handle_frontend_test(
     fn_tree="jax.numpy.conj",
+    aliases=["jax.numpy.conjugate"],
     dtype_and_x=helpers.dtype_and_values(
-        available_dtypes=helpers.get_dtypes("float"),
+        available_dtypes=helpers.get_dtypes("complex"),
     ),
 )
 def test_jax_numpy_conj(

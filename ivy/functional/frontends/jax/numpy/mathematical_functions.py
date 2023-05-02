@@ -8,6 +8,7 @@ from ivy.functional.frontends.jax.numpy import promote_types_of_jax_inputs
 from ivy.functional.frontends.numpy.manipulation_routines import trim_zeros
 from math import factorial
 
+
 # sign
 @to_ivy_arrays_and_back
 def sign(x, /):
@@ -101,6 +102,11 @@ def convolve(a, v, mode="full", *, precision=None):
 @to_ivy_arrays_and_back
 def cos(x):
     return ivy.cos(x)
+
+
+@to_ivy_arrays_and_back
+def conjugate(x):
+    return ivy.conj(x)
 
 
 @to_ivy_arrays_and_back
